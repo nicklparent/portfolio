@@ -1,7 +1,8 @@
 import './globals.css';
+import { BaseLayout } from './components/BaseLayout';
 function App(){
     return (
-        <p className="m-3 font-bold">Hello World</p>        
+        <BaseLayout />
     );
 }
 export default App;
