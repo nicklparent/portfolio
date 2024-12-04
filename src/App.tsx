@@ -1,5 +1,5 @@
 import './globals.css';
-import { Home } from './components/Home';
+import { Home } from './components/sections/Home';
 function App(){
     return (
         <Home />
