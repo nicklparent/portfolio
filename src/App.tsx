@@ -1,8 +1,8 @@
 import './globals.css';
-import { BaseLayout } from './components/BaseLayout';
+import { Home } from './components/Home';
 function App(){
     return (
-        <BaseLayout />
+        <Home />
     );
 }
 export default App;
