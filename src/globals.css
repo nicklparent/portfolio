@@ -2,8 +2,8 @@
 @tailwind base;
 @tailwind utilities;
 
-@layer base {
+/* @layer base {
     html {
         @apply text-DEFAULT-dark dark:text-DEFAULT-light
     }
-}
+} */

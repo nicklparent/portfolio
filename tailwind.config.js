@@ -11,7 +11,7 @@ module.exports = {
         dark: "#0f172a",
       },
       textColor: {
-        DEFAULT: {
+        default: {
           dark: "#94a3b8",
           light: "#0f172a"
         }
