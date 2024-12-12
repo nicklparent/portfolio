@@ -1,12 +1,18 @@
 import './globals.css';
 import { Home } from './components/sections/Home';
 import { Header } from './components/sections/Header';
+import { Card } from './components/sections/Card';
 function App(){
     return (
         <>
         <div className='dark:bg-light bg-dark'>
             <Header />
-            <Home />
+            <div className='flex flex-row'>
+                <div className='flex flex-row'>
+                    <Home />
+                    <Card />
+                </div>
+            </div>
         </div>
         </>
     );

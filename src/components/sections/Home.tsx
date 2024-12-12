@@ -13,6 +13,7 @@ export function Home(){
 
     return (
         <>
+        <div>
             <p className='text-9xl font-mono text-neutral-600/50 italic p-4 !pl-10'>Nicholas <br /> Parent</p>
             <div id='type-container'>
                 <div id='type-intro' className='text-2xl text-white dark:text-black'>
@@ -22,6 +23,8 @@ export function Home(){
             <div className='p-6'>
                 <p>{intro}</p>
             </div>
+
+        </div>
         </>
     )
 }
