@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.d475d89f.css",
+    "main.js": "/static/js/main.619fd3f9.js",
+    "static/media/outdoor-photo.jpg": "/static/media/outdoor-photo.25f2328290b5d8d3b2d0.jpg",
+    "index.html": "/index.html",
+    "main.d475d89f.css.map": "/static/css/main.d475d89f.css.map",
+    "main.619fd3f9.js.map": "/static/js/main.619fd3f9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d475d89f.css",
+    "static/js/main.619fd3f9.js"
+  ]
+}

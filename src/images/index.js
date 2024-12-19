@@ -1,3 +1,5 @@
-const portrait = require('./outdoor-photo.jpg');
-
+const portrait = [
+    require('./outdoor-photo.jpg'),
+    
+];
 export default portrait;

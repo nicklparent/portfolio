@@ -1,7 +1,7 @@
 import './globals.css';
 import { Home } from './components/sections/Home';
 import { Header } from './components/sections/Header';
-import { Card } from './components/sections/Card';
+import { Card } from './components/Card';
 function App(){
     return (
         <>

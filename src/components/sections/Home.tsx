@@ -23,7 +23,6 @@ export function Home(){
             <div className='p-6'>
                 <p>{intro}</p>
             </div>
-
         </div>
         </>
     )
