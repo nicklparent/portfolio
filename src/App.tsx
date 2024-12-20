@@ -6,10 +6,12 @@ function App(){
     return (
         <>
         <div className='dark:bg-light bg-dark'>
-            <Header />
+            <div className=''>
+                <Header />
+            </div>
             <div className='flex flex-row'>
                 <div className='flex flex-row'>
-                    <Home />
+                    <Home />    
                     <Card />
                 </div>
             </div>
