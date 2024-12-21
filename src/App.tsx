@@ -12,11 +12,11 @@ function App(){
             </div>
             {/* landing zone */}
             <div className='flex flex-col'>
-                <div className='flex flex-row'>
+                <div id='home' className='flex flex-row'>
                     <Home />    
                     <Card />
                 </div>
-                <div className='mt-4'>
+                <div id='about' className='mt-4'>
                     <About />
 
                 </div>

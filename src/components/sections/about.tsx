@@ -4,11 +4,11 @@ import '../../assets/css/glow.css'
 
 export function About(){
 
-    const pathStart = 400;
-    const pathEnd = 850;
-    const starSize = 50;
-    const pathLength = 500;
+    const pathLength = 800;
     const pathWidth = 50;
+    const starSize = 50;
+    const pathStart = 400;
+    const pathEnd = pathLength * 2 - starSize;
 
     const [roadPos, setRoadPos] = useState(0);
     

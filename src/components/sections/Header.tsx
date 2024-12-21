@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useRef } from 'react';
+
 import { ToggleTheme } from '../ToggleTheme';
 
 export function Header(){
-    
     return (
         <div className='flex flex-row justify-between align-middle dark:bg-light bg-dark'>
             <div className="flex flex-row gap-3 *:p-6">
-                <p>Home</p>
-                <p>About</p>
-                <p>Projects</p>
-                <p>Resume</p>
+                <a href='#home'>Home</a>
+                <a href='#about'>About</a>
+                <a href='#projects'>Projects</a>
+                <a href='#Resume'>Resume</a>
             </div>
             <div className='p-4'>
                 <ToggleTheme />
