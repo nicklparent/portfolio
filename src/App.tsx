@@ -3,7 +3,8 @@ import { Home } from './components/sections/Home';
 import { Header } from './components/sections/Header';
 import { Card } from './components/Card';
 import { About } from './components/sections/About'; 
-function App(){
+import { Projects } from './components/sections/Projects';
+export function App(){
     return (
         <>
         <div className='dark:bg-light bg-dark'>
@@ -18,7 +19,9 @@ function App(){
                 </div>
                 <div id='about' className='mt-4'>
                     <About />
-
+                </div>
+                <div id="projects">
+                    <Projects />
                 </div>
             </div>
         </div>

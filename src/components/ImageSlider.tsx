@@ -1,4 +1,3 @@
-// copilot: disable
 import React, { useState } from "react";
 
 export function ImageSlider({images = []}: {images: string[]}){
@@ -26,7 +25,7 @@ export function ImageSlider({images = []}: {images: string[]}){
                         />
                     ))}
                 </div>
-                <button className="absolute left-0 top-1/2 transform bg-gray-500/90 rounded-full p-2 ml-4" 
+                <button className="absolute left-0 top-1/2 transform bg-gray-500/90 rounded-full p-2 ml-4 hover:bg-gray-700/90 hover:p-3 hover:duration-75" 
                     onClick={prevSlide}>
                     <svg
                         width={24}
@@ -36,7 +35,8 @@ export function ImageSlider({images = []}: {images: string[]}){
                     </svg>
                     
                 </button>
-                <button className="absolute right-0 top-1/2 transform bg-gray-500/90 rounded-full p-2 mr-4" onClick={nextSlide}>
+                <button className="absolute right-0 top-1/2 transform bg-gray-500/90 rounded-full p-2 mr-4 hover:bg-gray-700/90 hover:p-3 hover:duration-75" 
+                    onClick={nextSlide}>
                     <svg
                         width={24}
                         height={24}
