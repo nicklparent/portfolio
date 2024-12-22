@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import '../../assets/css/typing.css';
 
 export function Home(){
     return (
-        <div style={{maxWidth: '70%'}} >
-            <p className='text-9xl font-mono text-slate-300 dark:text-slate-800 italic p-3 !pl-10'>Nicholas <br /> Parent</p>
+        <div style={{maxWidth: '70%'}}>
+            <p className='text-8xl/snug font-mono text-slate-300 dark:text-slate-800 italic p-3 !pl-10'>Nicholas <br /> Parent</p>
             <div id='type-container'>
                 <div id='type-intro' className='text-2xl text-white dark:text-black'>
                     Full Stack Developer & Aspiring Student

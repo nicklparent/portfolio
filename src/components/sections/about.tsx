@@ -37,7 +37,7 @@ export function About(){
         const handleMessageScroll = () => {
 
             if (window.scrollY >= 500 && window.scrollY < 800) {
-                setMessage(Math.floor((window.scrollY - 500) / 100));
+                setMessage(Math.floor((window.scrollY - 500) / 200));
             }
             
         };
@@ -53,7 +53,7 @@ export function About(){
                     <rect height={pathLength} width={pathWidth} fill="purple" ry={10} className="shadow shadow-light dark:hidden block" style={{animation: 'glowDark 3s infinite'}}/>
                     <rect height={pathLength} width={pathWidth} fill="blue" ry={10} className="shadow shadow-light hidden dark:block" />
                 </svg>
-                <div className="absolute" style={{top: `${roadPos}px`, left: '0'}}>
+                <div className="absolute" style={{top: `${roadPos / 2}px`, left: '0'}}>
                     <Star />
                 </div>
             </div>
@@ -62,7 +62,6 @@ export function About(){
                 {messages.map((curr, index) => (
                     <React.Fragment key={index}>
                         <p className={index === messageId ? FocusMessage : nonFocusMessage}>{curr}</p>
-                        {/* <p style={{ display: messageId === index ? 'block' : 'none' }}>{curr}</p> */}
                         <br />
                     </React.Fragment>
                 ))}

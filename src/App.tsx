@@ -3,8 +3,12 @@ import { Home } from './components/sections/Home';
 import { Header } from './components/sections/Header';
 import { Card } from './components/Card';
 import { About } from './components/sections/About'; 
-import { Projects } from './components/sections/Projects';
+import { Projects, Project } from './components/sections/Projects';
 export function App(){
+
+    const projectList: Project[] = [
+        {title: 'This Portfolio', bio: '', imageRef: '', gitRef: ''}
+    ];
     return (
         <>
         <div className='dark:bg-light bg-dark'>
@@ -21,7 +25,7 @@ export function App(){
                     <About />
                 </div>
                 <div id="projects">
-                    <Projects />
+                    <Projects projects={projectList} />
                 </div>
             </div>
         </div>
