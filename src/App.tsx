@@ -7,7 +7,7 @@ import { Projects, Project } from './components/sections/Projects';
 export function App(){
 
     const projectList: Project[] = [
-        {title: 'This Portfolio', bio: '', imageRef: '', gitRef: ''}
+        {title: 'This Portfolio', bio: 'Home for all my skills, interests, projects, etc. to be stored', imageRef: '', gitRef: ''}
     ];
     return (
         <>
@@ -19,7 +19,6 @@ export function App(){
                 </div>
                 <div id='home' className='flex flex-row'>
                     <Home />    
-                    <Card />
                 </div>
                 <div id='about' className='mt-4'>
                     <About />
