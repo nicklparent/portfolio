@@ -15,7 +15,7 @@ export function Projects({ projects = [] }){
         <div className='flex flex-row align-middle'>
             {projects.map((project, index) => (
                 <div>
-
+                    
                 </div>
             ))}
         </div>

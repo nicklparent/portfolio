@@ -1,6 +1,6 @@
 import React from "react";
 import portrait from '../assets/images';
-import { ImageSlider } from "./ImageSlider";
+import { ImageSlider } from "../assets/ImageSlider";
 
 export function Card(){
     return (

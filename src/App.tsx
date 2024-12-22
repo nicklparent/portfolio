@@ -8,11 +8,11 @@ export function App(){
     return (
         <>
         <div className='dark:bg-light bg-dark'>
-            <div className='sticky top-0 z-50'>
-                <Header />
-            </div>
             {/* landing zone */}
             <div className='flex flex-col'>
+                <div className='sticky top-0 z-50'>
+                    <Header />
+                </div>
                 <div id='home' className='flex flex-row'>
                     <Home />    
                     <Card />

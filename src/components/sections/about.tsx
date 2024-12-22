@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Star } from "../../assets/star";
-import '../../assets/css/glow.css'
+import '../../assets/css/about.css'
 
 export function About(){
 
@@ -9,26 +9,43 @@ export function About(){
     const starSize = 50;
     const pathStart = 400;
     const pathEnd = pathLength * 2 - starSize;
-
+    
     const [roadPos, setRoadPos] = useState(0);
     
+    const messages = [
+        "I started my interest in computers in highschool, when I took my first computer science course in python, I immediatly knew i wanted to learn more.",
+        "I continued to learn everything I could given by my highschool and followed into AP computer science. I ended up saving up to build my own PC and continued learning as hobby time.",
+        "Now I have been studying at Dalhousie University to expand my skills in programming",
+    ]
+    const nonFocusMessage = "text-sm";
+    const FocusMessage = "dark:text-neutral-800 text-neutral-200 font-sans text-xl";
+    const [messageId, setMessage] = useState(0);
     useEffect(() => {
-        const handleScroll = () => {
-            setRoadPos(window.scrollY);
-            
+        const handleScroll = () => {            
             if (window.scrollY > pathStart && window.scrollY < pathEnd){
                 setRoadPos(window.scrollY - pathStart);
             } else if (window.scrollY < pathStart){
                 setRoadPos(0);
             } else {
-                setRoadPos(pathStart + starSize);
+                setRoadPos(pathEnd - pathStart + starSize);
             }
         }
-
         window.addEventListener('scroll', handleScroll);
     }, []);
 
+    useEffect(() => {
+        const handleMessageScroll = () => {
+
+            if (window.scrollY >= 500 && window.scrollY < 800) {
+                setMessage(Math.floor((window.scrollY - 500) / 100));
+            }
+            
+        };
+
+        window.addEventListener('scroll', handleMessageScroll);
+    }, [])
     return(
+        
         <div className="flex justify-evenly bg-gradient-to-b from-dark to-darkStart dark:from-light dark:to-lightEnd ">
             {/* Star Path */}
             <div className="relative">
@@ -42,16 +59,13 @@ export function About(){
             </div>
             {/* Text content */}
             <div className="*:max-w-xl *:my-10 font-mono text-xl">   
-                <p>I started my interest in computers in highschool, when I took my first computer science course in python,
-                    I immediatly knew i wanted to learn more.
-                </p>
-                <br />
-                <p>I continued to learn everything I could given by my highschool and followed into AP computer science.
-                I ended up saving up to build my own PC and continued learning as hobby time.
-                </p>
-                <br />
-                <p >Now I have been studying at Dalhousie University to expand my skills in programming</p>
-                <br />
+                {messages.map((curr, index) => (
+                    <React.Fragment key={index}>
+                        <p className={index === messageId ? FocusMessage : nonFocusMessage}>{curr}</p>
+                        {/* <p style={{ display: messageId === index ? 'block' : 'none' }}>{curr}</p> */}
+                        <br />
+                    </React.Fragment>
+                ))}
             </div>
         </div>
     );
