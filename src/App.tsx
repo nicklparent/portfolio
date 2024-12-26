@@ -4,18 +4,16 @@ import { Home } from './components/sections/Home';
 import { Header } from './components/sections/Header';
 import { About } from './components/sections/About'; 
 import { Projects } from './components/sections/Projects';
-import { Resume } from './components/sections/resume/Resume'; // Import your Resume component
+import { Resume } from './components/sections/resume/Resume';
 
 export function App() {
     return (
         <Router>
             <div className='dark:bg-light bg-dark'>
                 <div className='flex flex-col'>
-                    {/* Sticky Header */}
                     <div className='sticky top-0 z-50'>
                         <Header />
                     </div>
-                    {/* Routes */}
                     <Routes>
                         <Route path="/" element={
                             <div>
