@@ -4,8 +4,8 @@ import { Card } from '../Card';
 
 export function Home(){
     return (
-        <>
-            <div style={{maxWidth: '70%'}}>
+        <div className='grid grid-cols-4 h-4/6'>
+            <div className='col-span-3'>
                 <p className='text-8xl/snug font-mono text-slate-300 dark:text-slate-800 italic p-3 !pl-10'>Nicholas <br /> Parent</p>
                 <div id='type-container'>
                     <div id='type-intro' className='text-2xl text-white dark:text-black'>
@@ -21,7 +21,9 @@ export function Home(){
                     </p>
                 </div>
             </div>
-            <Card />
-        </>
+            <div className='col-span-1'>
+                <Card />
+            </div>
+        </div>
     )
 }

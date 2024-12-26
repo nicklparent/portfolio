@@ -2,8 +2,10 @@
 @tailwind base;
 @tailwind utilities;
 
+html{
+    overscroll-behavior: none;
+}
 @layer base {
-
     p, a, h1, h2, h3, h4, h5, h6, li {
         @apply text-default-dark dark:text-default-light
     }

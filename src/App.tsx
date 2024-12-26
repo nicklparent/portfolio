@@ -1,34 +1,41 @@
 import './globals.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Home } from './components/sections/Home';
 import { Header } from './components/sections/Header';
-import { Card } from './components/Card';
 import { About } from './components/sections/About'; 
-import { Projects, Project } from './components/sections/Projects';
-export function App(){
+import { Projects } from './components/sections/Projects';
+import { Resume } from './components/sections/resume/Resume'; // Import your Resume component
 
-    const projectList: Project[] = [
-        {title: 'This Portfolio', bio: 'Home for all my skills, interests, projects, etc. to be stored', imageRef: '', gitRef: ''}
-    ];
+export function App() {
     return (
-        <>
-        <div className='dark:bg-light bg-dark'>
-            {/* landing zone */}
-            <div className='flex flex-col'>
-                <div className='sticky top-0 z-50'>
-                    <Header />
-                </div>
-                <div id='home' className='flex flex-row'>
-                    <Home />    
-                </div>
-                <div id='about' className='mt-4'>
-                    <About />
-                </div>
-                <div id="projects">
-                    <Projects projects={projectList} />
+        <Router>
+            <div className='dark:bg-light bg-dark'>
+                <div className='flex flex-col'>
+                    {/* Sticky Header */}
+                    <div className='sticky top-0 z-50'>
+                        <Header />
+                    </div>
+                    {/* Routes */}
+                    <Routes>
+                        <Route path="/" element={
+                            <div>
+                                <div id='home' className='flex flex-row'>
+                                    <Home />
+                                </div>
+                                <div id='about' className='mt-4'>
+                                    <About />
+                                </div>
+                                <div id="projects">
+                                    <Projects />
+                                </div>
+                            </div>
+                        } />
+                        <Route path="/resume" element={<Resume />} />
+                    </Routes>
                 </div>
             </div>
-        </div>
-        </>
+        </Router>
     );
 }
+
 export default App;

@@ -12,3 +12,18 @@
         filter: drop-shadow(0 0 5px purple);
     }
 }
+
+@keyframes glowLight {
+    0%{
+        fill: blue; 
+        filter: drop-shadow(0 0 5px blue);
+    }
+    50%{
+        fill:rgb(63, 132, 180);
+        filter: drop-shadow(0 0 20px rgb(63, 132, 180));
+    }
+    100%{
+        fill: blue; 
+        filter: drop-shadow(0 0 5px blue);
+    }
+}

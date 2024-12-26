@@ -9,7 +9,7 @@ export function Header(){
                 <a href='#home'>Home</a>
                 <a href='#about'>About</a>
                 <a href='#projects'>Projects</a>
-                <a href='#Resume'>Resume</a>
+                <a href='./resume'>Resume</a>
             </div>
             <div className='p-4'>
                 <ToggleTheme />
