@@ -4,9 +4,12 @@
 
 html{
     overscroll-behavior: none;
+    scroll-padding: 4rem;
+    scroll-behavior: smooth;
 }
 @layer base {
-    p, a, h1, h2, h3, h4, h5, h6, li {
+    html {
         @apply text-default-dark dark:text-default-light
     }
 }
+

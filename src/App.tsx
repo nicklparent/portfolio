@@ -11,7 +11,7 @@ export function App() {
         <Router>
             <div className='dark:bg-light bg-dark'>
                 <div className='flex flex-col'>
-                    <div className='sticky top-0 z-50'>
+                    <div className='sticky top-0 z-50' id='header'>
                         <Header />
                     </div>
                     <Routes>

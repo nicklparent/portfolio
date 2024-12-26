@@ -29,7 +29,7 @@ export function Projects(){
                         alt={project.imageRef}
                         className='size-2/3 p-2' />
                     <p className='p-3' style={{maxHeight: '30%'}}>{project.bio}</p>
-                    <a href={project.gitRef} className='flex flex-1 flex-row *:m-1 justify-center bg-darkStart dark:bg-lightEnd'><GitLogo /><br />View Source Code!</a>
+                    <a href={project.gitRef} className='flex flex-1 flex-row *:mx-1 justify-center bg-darkStart dark:bg-lightEnd'><GitLogo /><br />View Source Code!</a>
                 </div>
             ))}
         </div>
