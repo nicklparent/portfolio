@@ -4,7 +4,7 @@ import '../../assets/css/about.css'
 
 export function About(){
 
-    const pathLength = 800;
+    const pathLength = 750;
     const pathWidth = 50;
     const starSize = 50;
     const pathStart = 400;
@@ -23,12 +23,12 @@ export function About(){
 
     useEffect(() => {
         const handleScroll = () => {            
-            if (window.scrollY > pathStart && window.scrollY < pathEnd){
-                setRoadPos((window.scrollY - pathStart) * 1.5);
+            if (window.scrollY > pathStart && window.scrollY < pathEnd + starSize){
+                setRoadPos((window.scrollY - pathStart) * 1.4);
             } else if (window.scrollY < pathStart){
                 setRoadPos(0);
             } else {
-                setRoadPos(pathEnd);
+                setRoadPos(pathEnd - starSize);
             }
         }
         window.addEventListener('scroll', handleScroll);
@@ -37,9 +37,8 @@ export function About(){
 
     useEffect(() => {
         const handleMessageScroll = () => {
-
-            if (window.scrollY >= 500 && window.scrollY < pathEnd * 2) {
-                setMessage(Math.floor((window.scrollY - 500) / 150));
+            if (window.scrollY >= pathStart && window.scrollY < pathEnd) {
+                setMessage(Math.floor((window.scrollY - pathStart - starSize) / 280));
             }
             
         };
@@ -56,12 +55,12 @@ export function About(){
                     <rect height={pathLength} width={pathWidth} fill="purple" ry={10} className="shadow shadow-light dark:hidden block" style={{animation: 'glowDark 3s infinite'}}/>
                     <rect height={pathLength} width={pathWidth} fill="blue" ry={10} className="shadow shadow-light hidden dark:block" style={{animation: 'glowLight 3s infinite'}}/>
                 </svg>
-                <div className="absolute" style={{top: `${roadPos / 2}px`, left: '0'}}>
+                <div className="absolute" style={{top: `${roadPos / 1.5}px`, left: '0'}}>
                     <Star />
                 </div>
             </div>
             {/* Text content */}
-            <div className="*:max-w-xl *:my-10 font-mono text-xl">   
+            <div className="*:max-w-xl *:my-10 font-mono text-xl flex flex-col justify-around" id="messages">   
                 {messages.map((curr, index) => (
                     <React.Fragment key={index}>
                         <p className={index === messageId ? FocusMessage : nonFocusMessage}>{curr}</p>

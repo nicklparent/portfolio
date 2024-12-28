@@ -5,6 +5,7 @@ import { Header } from './components/sections/Header';
 import { About } from './components/sections/About'; 
 import { Projects } from './components/sections/Projects';
 import { Resume } from './components/sections/resume/Resume';
+import { ContactMe } from './components/sections/ContactMe';
 
 export function App() {
     return (
@@ -25,6 +26,9 @@ export function App() {
                                 </div>
                                 <div id="projects">
                                     <Projects />
+                                </div>
+                                <div id='contactMe'>
+                                    <ContactMe />
                                 </div>
                             </div>
                         } />

@@ -20,6 +20,7 @@ export function Header(){
                 <a href='/#about'>About</a>
                 <a href='/#projects'>Projects</a>
                 <a href='/resume'>Resume</a>
+                <a href='/#contactMe'>Contact Me</a>
             </div>
             <div className='p-4'>
                 <ToggleTheme />
