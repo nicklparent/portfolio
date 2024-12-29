@@ -1,11 +1,25 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 export const ContactMe = () => {
-    const messageHandler = (event: { preventDefault: () => void; }) => {
+    const [email, setEmail] = useState("");
+    const [subject, setSubject] = useState("");
+    const [message, setMessage] = useState("");
+
+
+    const messageHandler = async (event: { preventDefault: () => void; }) => {
         event.preventDefault();
         console.log("working");
 
-        // Securly save messages to db 
+        const response = await fetch('../../api/contact', {
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                'email': email,
+                'subject': subject,
+                'message': message,
+            })
+        }) 
     };
 
     useEffect(() => {
@@ -23,11 +37,11 @@ export const ContactMe = () => {
                 <form className="w-1/3">
                     
                     <label htmlFor="email-in">Email Address</label>
-                    <input type="email" id="email-in" className="rounded p-2 border appearance-none w-full leading-tight mb-4" placeholder="Email Address"/>
+                    <input type="email" id="email-in" onChange={(e) => setEmail(e.target.value)} className="rounded p-2 border appearance-none w-full leading-tight mb-4" placeholder="Email Address"/>
                     <label htmlFor="subject-in">Subject</label>
-                    <input type="text" id="subject-in" className="rounded p-2 border appearance-none w-full leading-tight mb-4" placeholder="Subject"/>
+                    <input type="text" id="subject-in" onChange={(e) => setSubject(e.target.value)} className="rounded p-2 border appearance-none w-full leading-tight mb-4" placeholder="Subject"/>
                     <label htmlFor="message-in">Message</label>
-                    <textarea id="message-in" className="rounded p-2 border appearance-none leading-tight w-full min-h-32 max-h-60 text-black" placeholder="Message"/>
+                    <textarea id="message-in" onChange={(e) => setMessage(e.target.value)} className="rounded p-2 border appearance-none leading-tight w-full min-h-32 max-h-60 text-black" placeholder="Message"/>
                     <div className="flex justify-end">
                         <button id="message-submit" className="rounded-md px-4 py-3  my-3 bg-blue-800 dark:bg-blue-500 w-1/5">Send </button>
                     </div>
