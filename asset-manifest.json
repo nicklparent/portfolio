@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.015dd600.css",
-    "main.js": "/portfolio/static/js/main.76b6c3b2.js",
+    "main.js": "/portfolio/static/js/main.c6a8ce1c.js",
     "static/media/portfolio.jpg": "/portfolio/static/media/portfolio.e17cdc78da7964d6230c.jpg",
     "static/media/prom-photo.jpg": "/portfolio/static/media/prom-photo.4131fad1cd8922dc6fa3.jpg",
     "static/media/outdoor-photo.jpg": "/portfolio/static/media/outdoor-photo.25f2328290b5d8d3b2d0.jpg",
     "static/media/dalhousieForum.jpg": "/portfolio/static/media/dalhousieForum.f3ab3ef18ff3e4b814cd.jpg",
     "index.html": "/portfolio/index.html",
     "main.015dd600.css.map": "/portfolio/static/css/main.015dd600.css.map",
-    "main.76b6c3b2.js.map": "/portfolio/static/js/main.76b6c3b2.js.map"
+    "main.c6a8ce1c.js.map": "/portfolio/static/js/main.c6a8ce1c.js.map"
   },
   "entrypoints": [
     "static/css/main.015dd600.css",
-    "static/js/main.76b6c3b2.js"
+    "static/js/main.c6a8ce1c.js"
   ]
 }
