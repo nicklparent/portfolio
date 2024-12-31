@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.015dd600.css",
-    "main.js": "/portfolio/static/js/main.f28c29b4.js",
-    "static/media/portfolio.jpg": "/portfolio/static/media/portfolio.e17cdc78da7964d6230c.jpg",
-    "static/media/prom-photo.jpg": "/portfolio/static/media/prom-photo.4131fad1cd8922dc6fa3.jpg",
-    "static/media/outdoor-photo.jpg": "/portfolio/static/media/outdoor-photo.25f2328290b5d8d3b2d0.jpg",
-    "static/media/dalhousieForum.jpg": "/portfolio/static/media/dalhousieForum.f3ab3ef18ff3e4b814cd.jpg",
-    "index.html": "/portfolio/index.html",
-    "main.015dd600.css.map": "/portfolio/static/css/main.015dd600.css.map",
-    "main.f28c29b4.js.map": "/portfolio/static/js/main.f28c29b4.js.map"
+    "main.css": "/static/css/main.015dd600.css",
+    "main.js": "/static/js/main.a40b3c69.js",
+    "static/media/portfolio.jpg": "/static/media/portfolio.e17cdc78da7964d6230c.jpg",
+    "static/media/prom-photo.jpg": "/static/media/prom-photo.4131fad1cd8922dc6fa3.jpg",
+    "static/media/outdoor-photo.jpg": "/static/media/outdoor-photo.25f2328290b5d8d3b2d0.jpg",
+    "static/media/dalhousieForum.jpg": "/static/media/dalhousieForum.f3ab3ef18ff3e4b814cd.jpg",
+    "index.html": "/index.html",
+    "main.015dd600.css.map": "/static/css/main.015dd600.css.map",
+    "main.a40b3c69.js.map": "/static/js/main.a40b3c69.js.map"
   },
   "entrypoints": [
     "static/css/main.015dd600.css",
-    "static/js/main.f28c29b4.js"
+    "static/js/main.a40b3c69.js"
   ]
 }
