@@ -18,7 +18,7 @@ export function App() {
             <div className='dark:bg-light bg-dark'>
                 <div className='flex flex-col'>
                     <Routes>
-                        <Route path="/" element={
+                        <Route path="/portfolio" element={
                             <div>
                                 <div id='home' className='flex flex-row'>
                                     <Home />
