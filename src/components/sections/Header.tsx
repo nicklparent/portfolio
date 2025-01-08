@@ -8,7 +8,6 @@ export function Header(){
                 <a href='./#home'>Home</a>
                 <a href='./#about'>About</a>
                 <a href='./#projects'>Projects</a>
-                <a href='/portfolio/resume'>Resume</a>
                 <a href='./#contactMe'>Contact Me</a>
             </div>
             <div className='p-4'>

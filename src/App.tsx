@@ -5,7 +5,7 @@ import { Home } from './components/sections/Home';
 import { Header } from './components/sections/Header';
 import { About } from './components/sections/About'; 
 import { Projects } from './components/sections/Projects';
-import { Resume } from './components/sections/resume/Resume';
+import { Resume } from './components/sections/Resume';
 import { ContactMe } from './components/sections/ContactMe';
 
 export function App() {
@@ -29,12 +29,14 @@ export function App() {
                                 <div id="projects">
                                     <Projects />
                                 </div>
+                                <div>
+                                    <Resume />
+                                </div>
                                 <div id='contactMe'>
                                     <ContactMe />
                                 </div>
                             </div>
                         } />
-                        <Route path="/resume" element={<Resume />} />
                     </Routes>
                 </div>
             </div>
