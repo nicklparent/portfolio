@@ -4,11 +4,11 @@ import { Card } from '../Card';
 
 export function Home(){
     return (
-        <div className='sm:grid sm:grid-cols-4 h-4/6 flex flex-col'>
+        <div className='sm:grid sm:grid-cols-4 h-4/6 flex flex-col w-screen'>
             <div className='col-span-3'>
-                <p className='text-8xl/snug font-mono text-slate-300 dark:text-slate-800 italic p-3 !pl-10'>Nicholas <br /> Parent</p>
+                <p className='text-6xl  lg:text-8xl/snug font-mono text-slate-300 dark:text-slate-800 italic p-3'>Nicholas <br /> Parent</p>
                 <div id='type-container'>
-                    <div id='type-intro' className='text-2xl text-white dark:text-black'>
+                    <div id='type-intro' className=' text-white dark:text-black'>
                         Full Stack Developer & Aspiring Student
                     </div>
                 </div>

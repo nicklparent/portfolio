@@ -4,7 +4,7 @@ import '../../assets/css/about.css'
 
 export function About(){
 
-    const pathLength = 750;
+    const pathLength = 850;
     const pathWidth = 50;
     const starSize = 50;
     const pathStart = 400;
@@ -28,7 +28,7 @@ export function About(){
             } else if (window.scrollY < pathStart){
                 setRoadPos(0);
             } else {
-                setRoadPos(pathEnd - starSize);
+                setRoadPos(pathEnd);
             }
         }
         window.addEventListener('scroll', handleScroll);
@@ -48,10 +48,10 @@ export function About(){
     }, [])
     return(
         
-        <div className="flex justify-evenly bg-gradient-to-b from-dark to-darkStart dark:from-light dark:to-lightEnd pb-3">
+        <div className="flex bg-gradient-to-b from-dark to-darkStart dark:from-light dark:to-lightEnd pb-3">
             {/* Star Path */}
-            <div className="relative">
-                <svg height={pathLength}>
+            <div className="relative *:px-8">
+                <svg height={pathLength} width={pathWidth * 3}>
                     <rect height={pathLength} width={pathWidth} fill="purple" ry={10} className="shadow shadow-light dark:hidden block" style={{animation: 'glowDark 3s infinite'}}/>
                     <rect height={pathLength} width={pathWidth} fill="blue" ry={10} className="shadow shadow-light hidden dark:block" style={{animation: 'glowLight 3s infinite'}}/>
                 </svg>
@@ -60,7 +60,7 @@ export function About(){
                 </div>
             </div>
             {/* Text content */}
-            <div className="*:max-w-xl *:my-10 font-mono text-xl flex flex-col justify-around" id="messages">   
+            <div className="*:my-10 flex-1 font-mono text-xl flex flex-col justify-around px-4" id="messages">   
                 {messages.map((curr, index) => (
                     <React.Fragment key={index}>
                         <p className={index === messageId ? FocusMessage : nonFocusMessage}>{curr}</p>

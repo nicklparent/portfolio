@@ -16,7 +16,7 @@ export function App() {
                     <Routes>
                         <Route path="/portfolio" element={
                             <div>
-                                <div className='sticky sm:relative top-0 z-50' id='header'>
+                                <div className='sm:sticky relative top-0 z-50' id='header'>
                                     <Header />
                                 </div>
                                 <div id='home' className='flex flex-row'>

@@ -9,8 +9,13 @@
 }
 
 #type-container {
-    display: inline-block;
+    /* display: inline-block; */
+    width: 100%;
+    height: fit-content;
     padding: 2rem;
+    text-overflow: clip;
+    font-size: 100%;
+    line-height: 2rem;
 }
 
 @keyframes typing {
