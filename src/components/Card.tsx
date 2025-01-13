@@ -6,7 +6,7 @@ export function Card(){
     return (
         
         <div className="flex flex-row bg-gradient-to-b from-darkStart to-darkEnd dark:from-lightStart dark:to-lightEnd m-4 border bg-zinc-800 dark:border-slate-800 rounded-lg p-3">
-            <div className="flex flex-col justify-start *:p-1 *:border-gray-600 *:border-t-2 *:m-1">
+            <div className="flex flex-col justify-start align-middle *:p-1 *:border-gray-600 *:border-t-2 *:m-1">
                 <div className="border-none">
                     <ImageSlider images={portrait} />
                 </div>
