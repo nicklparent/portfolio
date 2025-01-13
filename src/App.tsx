@@ -5,21 +5,20 @@ import { Home } from './components/sections/Home';
 import { Header } from './components/sections/Header';
 import { About } from './components/sections/About'; 
 import { Projects } from './components/sections/Projects';
-import { Resume } from './components/sections/Resume';
 import { ContactMe } from './components/sections/ContactMe';
 
 export function App() {
     return (
     <>
-        <div className='sticky top-0 z-50' id='header'>
-            <Header />
-        </div>
         <Router>
             <div className='dark:bg-light bg-dark'>
                 <div className='flex flex-col'>
                     <Routes>
                         <Route path="/portfolio" element={
                             <div>
+                                <div className='sticky top-0 z-50' id='header'>
+                                    <Header />
+                                </div>
                                 <div id='home' className='flex flex-row'>
                                     <Home />
                                 </div>
@@ -28,9 +27,6 @@ export function App() {
                                 </div>
                                 <div id="projects">
                                     <Projects />
-                                </div>
-                                <div>
-                                    <Resume />
                                 </div>
                                 <div id='contactMe'>
                                     <ContactMe />
