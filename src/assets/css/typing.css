@@ -1,7 +1,7 @@
 #type-intro {
     overflow: hidden;
     border-right: .15em solid blue;
-    white-space: nowrap;
+    /* white-space: nowrap; */
     letter-spacing: .15em;
     animation: 
         typing 3.5s steps(40, end),
@@ -9,7 +9,7 @@
 }
 
 #type-container {
-    /* display: inline-block; */
+    display: inline-block;
     width: 100%;
     height: fit-content;
     padding: 2rem;

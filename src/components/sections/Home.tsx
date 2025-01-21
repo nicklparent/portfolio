@@ -8,7 +8,7 @@ export function Home(){
             <div className='col-span-3'>
                 <p className='text-6xl  text-center lg:text-8xl/snug font-mono text-slate-300 dark:text-slate-800 italic p-3'>Nicholas <br /> Parent</p>
                 <div id='type-container'>
-                    <div id='type-intro' className='text-center text-white dark:text-black'>
+                    <div id='type-intro' className='text-white dark:text-black text-lg md:text-3xl whitespace-nowrap'>
                         Full Stack Developer & Aspiring Student
                     </div>
                 </div>
