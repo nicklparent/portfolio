@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Star } from "../../assets/star";
-import '../../assets/css/about.css'
+import '../../assets/css/about.css';
 
-export function About(){
-
+export function About() {
     const pathLength = 850;
     const pathWidth = 50;
     const starSize = 50;
@@ -13,44 +12,45 @@ export function About(){
     const [roadPos, setRoadPos] = useState(0);
     
     const messages = [
-        "I started my interest in computers in highschool, when I took my first computer science course in python, I immediatly knew i wanted to learn more.",
-        "I continued to learn everything I could given by my highschool and followed into AP computer science. I ended up saving up to build my own PC and continued learning as hobby time.",
-        "Now I have been studying at Dalhousie University to expand my skills in programming",
-    ]
+        "I started my interest in computers in high school, when I took my first computer science course in Python. I immediately knew I wanted to learn more.",
+        "I continued to learn everything I could given by my high school and followed into AP Computer Science. I ended up saving up to build my own PC and continued learning as a hobby.",
+        "Now I have been studying at Dalhousie University to expand my skills in programming.",
+        "My current focus has been committed to working on mobile apps on both frontend and backend. I am building a tabletop character tracker and manager, as well as working with a non-profit company to build tools for lifeguards.",
+    ];
     const nonFocusMessage = "text-sm";
     const FocusMessage = "dark:text-neutral-800 text-neutral-200 font-sans text-xl";
     const [messageId, setMessage] = useState(0);
 
     useEffect(() => {
-        const handleScroll = () => {            
-            if (window.scrollY > pathStart && window.scrollY < pathEnd + starSize){
-                setRoadPos((window.scrollY - pathStart) * 1.4);
-            } else if (window.scrollY < pathStart){
+        const handleScroll = () => {
+            const scrollY = window.scrollY;
+            
+            // Update star position
+            if (scrollY > pathStart && scrollY < pathEnd) {
+                setRoadPos((scrollY - pathStart) * 1.4);
+            } else if (scrollY < pathStart) {
                 setRoadPos(0);
             } else {
                 setRoadPos(pathEnd);
             }
-        }
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
 
-    useEffect(() => {
-        const handleMessageScroll = () => {
-            if (window.scrollY >= pathStart && window.scrollY < pathEnd) {
-                setMessage(Math.floor((window.scrollY - pathStart - starSize) / 280));
+            // Update message highlighting
+            if (scrollY >= pathStart && scrollY < pathEnd) {
+                const newMessageId = Math.floor((scrollY - pathStart) / (pathLength / messages.length));
+                setMessage(newMessageId);
+            } else if (scrollY >= pathEnd) {
+                setMessage(messages.length - 1); // Highlight the last message
             }
-            
         };
 
-        window.addEventListener('scroll', handleMessageScroll);
-        return () => window.removeEventListener('scroll', handleMessageScroll);
-    }, [])
-    return(
-        
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [messages.length, pathEnd, pathStart, pathLength]);
+
+    return (
         <div className="flex bg-gradient-to-b from-dark to-darkStart dark:from-light dark:to-lightEnd pb-3">
             {/* Star Path */}
-            <div className="relative *:px-8">
+            <div className="relative *:px-8 hidden md:block">
                 <svg height={pathLength} width={pathWidth * 3}>
                     <rect height={pathLength} width={pathWidth} fill="purple" ry={10} className="shadow shadow-light dark:hidden block" style={{animation: 'glowDark 3s infinite'}}/>
                     <rect height={pathLength} width={pathWidth} fill="blue" ry={10} className="shadow shadow-light hidden dark:block" style={{animation: 'glowLight 3s infinite'}}/>
