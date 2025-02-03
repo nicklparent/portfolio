@@ -1,39 +1,54 @@
-import React, { useEffect, useState } from 'react';
-import { fetchProjects } from '../../assets/GitHubPuller';
-import { GitLogo } from '../../assets/Gitlogo';
+import React, { useEffect, useState } from "react";
+import { fetchProjects } from "../../assets/GitHubPuller";
+import { GitLogo } from "../../assets/Gitlogo";
 
-export interface Project{
-    title: string;
-    bio: string;
-    imageRef: string;
-    gitRef: string;
+export interface Project {
+  title: string;
+  bio: string;
+  imageRef: string;
+  gitRef: string;
 }
 
-export function Projects(){
-    const [projectList, setProjectList] = useState<Project[]>([]);
+export function Projects() {
+  const [projectList, setProjectList] = useState<Project[]>([]);
 
-    useEffect(() => {
-        const loadProjects = async () => {
-            setProjectList(await fetchProjects());
-        }
-        loadProjects();
-    }, [])
+  useEffect(() => {
+    const loadProjects = async () => {
+      setProjectList(await fetchProjects());
+    };
+    loadProjects();
+  }, []);
 
-    return (
-        
-        <div className='flex flex-1 flex-col align-middle justify-center p-6 bg-darkStart dark:bg-lightEnd font-mono'>
-            {projectList.map((project, index) => (
-                <div key={index} className='flex flex-col lg:flex-row m-2 size-1/2 justify-center h-80 overflow-hidden border-light dark:border-dark border rounded-xl p-2'>
-                    <div className='flex-row justify-center align-middle border-b md:border-r lg:border-b-0 p-2'>
-                        <h3 className='text-center '>{project.title}</h3>
-                        <img src={project.imageRef} 
-                            alt={project.imageRef}
-                            className='p-2 self-center' style={{maxHeight: '70%'}}/>
-                        <a href={project.gitRef} className='flex flex-1 flex-row *:mx-1 justify-center bg-darkStart dark:bg-lightEnd'><GitLogo /><br />View Source Code!</a>
-                    </div>
-                    <p className='p-3' style={{maxHeight: '40%'}}>{project.bio}</p>
-                </div>
-            ))}
+  return (
+    <div className="flex flex-col items-center justify-center p-6 bg-darkStart dark:bg-lightEnd font-mono">
+      {projectList.map((project, index) => (
+        <div
+          key={index}
+          className="flex flex-col lg:flex-row w-full max-w-4xl border rounded-xl border-light dark:border-dark overflow-hidden shadow-lg m-4"
+        >
+          <div className="flex flex-col items-center p-4 border-b lg:border-b-0 lg:border-r border-light dark:border-dark w-full lg:w-1/3">
+            <h3 className="text-lg font-semibold mb-2 text-center">{project.title}</h3>
+            <img
+              src={project.imageRef}
+              alt={project.title}
+              className="w-full h-auto object-cover rounded-md max-w-full"
+            />
+            <a
+              href={project.gitRef}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 mt-3 px-4 py-2 bg-darkStart dark:bg-lightEnd text-white rounded-md hover:bg-opacity-80 transition"
+            >
+              <GitLogo />
+              View Source Code
+            </a>
+          </div>
+
+          <div className="flex-1 p-4">
+            <p className="text-md leading-relaxed text-blue-100">{project.bio}</p>
+          </div>
         </div>
-    )
+      ))}
+    </div>
+  );
 }
