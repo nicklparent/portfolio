@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.9a1ee168.css",
-    "main.js": "/portfolio/static/js/main.956027cc.js",
+    "main.css": "/portfolio/static/css/main.036a42a8.css",
+    "main.js": "/portfolio/static/js/main.f96d5d06.js",
     "static/media/portfolio.jpg": "/portfolio/static/media/portfolio.e17cdc78da7964d6230c.jpg",
     "static/media/prom-photo.jpg": "/portfolio/static/media/prom-photo.4131fad1cd8922dc6fa3.jpg",
     "static/media/outdoor-photo.jpg": "/portfolio/static/media/outdoor-photo.25f2328290b5d8d3b2d0.jpg",
+    "static/media/dnd_character_aid.jpg": "/portfolio/static/media/dnd_character_aid.beeb04b24902993315dc.jpg",
     "static/media/dalhousieForum.jpg": "/portfolio/static/media/dalhousieForum.70886470a74c34095e32.jpg",
     "index.html": "/portfolio/index.html",
-    "main.9a1ee168.css.map": "/portfolio/static/css/main.9a1ee168.css.map",
-    "main.956027cc.js.map": "/portfolio/static/js/main.956027cc.js.map"
+    "main.036a42a8.css.map": "/portfolio/static/css/main.036a42a8.css.map",
+    "main.f96d5d06.js.map": "/portfolio/static/js/main.f96d5d06.js.map"
   },
   "entrypoints": [
-    "static/css/main.9a1ee168.css",
-    "static/js/main.956027cc.js"
+    "static/css/main.036a42a8.css",
+    "static/js/main.f96d5d06.js"
   ]
 }
