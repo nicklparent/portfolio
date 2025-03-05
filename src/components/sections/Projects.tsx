@@ -31,7 +31,7 @@ export function Projects() {
             <img
               src={project.imageRef}
               alt={project.title}
-              className="w-full h-auto object-cover rounded-md max-w-full"
+              className="w-auto h-auto object-cover rounded-md max-w-full"
             />
             <a
               href={project.gitRef}
